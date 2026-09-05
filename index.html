@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ayush Nautiyal — student creator building in 3D, motion, design, code and generative AI.">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>AYUSH NAUTIYAL — CREATIVE ARCHIVE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- HERO BACKGROUND MEDIA
+       Put your looping background video at: assets/media/hero.mp4
+       Recommended: MP4 (H.264), 1920x1080 or 1080x1920, 10-40 sec, compressed.
+  -->
+  <div class="hero-media-bg" id="heroMediaBg" aria-hidden="true">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/media/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-media-overlay"></div>
+  </div>
+
+  <!-- BACKGROUND AUDIO
+       Put your audio file at: assets/audio/song.mp3
+       Browsers usually block autoplay with sound, so the floating audio button below
+       starts it after the visitor taps/clicks. -->
+  <audio id="bgAudio" loop preload="metadata">
+    <source src="assets/audio/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="audio-toggle" id="audioToggle" type="button" aria-label="Play background audio" aria-pressed="false">
+    <span class="audio-icon">♫</span>
+    <span class="audio-label">SOUND OFF</span>
+  </button>
+
+  <div class="black-hole" id="blackHole" aria-hidden="true">
+    <div class="black-hole-glow"></div>
+    <div class="black-hole-core"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="mail" href="mailto:tuffgmailforme@gmail.com" aria-label="Email Ayush">✉</a>
+    <a class="brand" href="#top" aria-label="Back to top"><span>AN</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <aside class="menu" id="menu" aria-hidden="true">
+    <nav>
+      <a href="#work">WORK <span>01</span></a>
+      <a href="#about">ABOUT <span>02</span></a>
+      <a href="#contact">CONTACT <span>03</span></a>
+    </nav>
+    <div class="menu-foot">AYUSH NAUTIYAL / 2026</div>
+  </aside>
+
+  <main id="top">
+    <section class="hero pad">
+      <div class="eyebrow">( CREATIVE ARCHIVE / OPEN FOR EXPLORATION )</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="tiny-label">17 / CLASS XII / INDIA<br>DESIGN × CODE × MOTION × 3D</div>
+          <h1>AYUSH<br><span>NAUTIYAL</span><br><em>WORK / LAB</em></h1>
+          <p class="hero-sub">A personal playground for renders, edits, websites, motion experiments, generative AI and whatever I am learning next.</p>
+          <a class="round-cta magnetic" href="#work"><span>ENTER<br>ARCHIVE</span><b>↘</b></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="radar"></div>
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="hero-card">
+            <div class="card-top"><span>LIVE / 001</span><span>IND</span></div>
+            <div class="card-big">17</div>
+            <div class="card-mid">BUILDING<br>WHILE LEARNING</div>
+            <div class="card-bottom"><span>CHESS / 3D / CODE</span><span>SCROLL ↘</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>SCROLL</span><i></i><span>↘</span></div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div>BLENDER • PHOTOSHOP • DAVINCI RESOLVE • AFTER EFFECTS • MOTION DESIGN • CODE • GEN AI • CHESS • </div>
+      <div>BLENDER • PHOTOSHOP • DAVINCI RESOLVE • AFTER EFFECTS • MOTION DESIGN • CODE • GEN AI • CHESS • </div>
+    </section>
+
+    <section id="work" class="pad work-section">
+      <div class="section-head"><span>01</span><span>SELECTED WORK</span><span>2026 / ARCHIVE</span></div>
+      <div class="statement-row">
+        <div class="microcopy">3D / CGI<br>EDITING<br>COMPOSITING<br>VISUAL DESIGN<br>CREATIVE CODING<br>GEN AI</div>
+        <div class="statement">MAKING THINGS<br>FROM <strong>IDEA</strong><br>TO <strong>OUTPUT.</strong></div>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Work categories">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true">ALL <span>09</span></button>
+        <button class="filter" data-filter="blender" role="tab" aria-selected="false">BLENDER <span>04</span></button>
+        <button class="filter" data-filter="photoshop" role="tab" aria-selected="false">PHOTOSHOP <span>—</span></button>
+        <button class="filter" data-filter="davinci" role="tab" aria-selected="false">DAVINCI <span>—</span></button>
+        <button class="filter" data-filter="after-effects" role="tab" aria-selected="false">AFTER EFFECTS <span>—</span></button>
+        <button class="filter" data-filter="edits" role="tab" aria-selected="false">EDITS <span>—</span></button>
+        <button class="filter" data-filter="motion" role="tab" aria-selected="false">MOTION DESIGN <span>—</span></button>
+        <button class="filter" data-filter="code" role="tab" aria-selected="false">CODES <span>—</span></button>
+        <button class="filter" data-filter="tools" role="tab" aria-selected="false">TOOLS I BUILT <span>—</span></button>
+      </div>
+
+      <div class="projects" id="projectGrid">
+        <article class="project project-large reveal" data-category="blender">
+          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-day.webp" data-caption="Jungle Mountain — daylight environment render">
+            <img src="assets/blender/jungle-mountain-day.webp" alt="Blender render of a mountain covered with forest and grass">
+            <span class="media-number">01</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>JUNGLE MOUNTAIN</b><small>Blender / environment / terrain / foliage</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project reveal" data-category="blender">
+          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-field.webp" data-caption="Jungle Mountain — wide field composition">
+            <img src="assets/blender/jungle-mountain-field.webp" alt="Wide Blender mountain scene with dense grass and trees">
+            <span class="media-number">02</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>FIELD / MOUNTAIN</b><small>Blender / landscape / composition</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project reveal" data-category="blender">
+          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-night.webp" data-caption="Jungle Mountain — cinematic night lighting">
+            <img src="assets/blender/jungle-mountain-night.webp" alt="Cinematic Blender mountain render at night with warm lighting">
+            <span class="media-number">03</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>AFTER DARK</b><small>Blender / lighting / atmosphere</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project project-large reveal" data-category="blender">
+          <button class="media real-media" data-lightbox="assets/blender/blender-cyberpunk-jungle.webp" data-caption="Cyberpunk jungle — real-time / stylized Blender scene">
+            <img src="assets/blender/blender-cyberpunk-jungle.webp" alt="Stylized Blender jungle scene with a purple sports car">
+            <span class="media-number">04</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>CYBER JUNGLE</b><small>Blender / stylized lighting / vehicle scene</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project placeholder reveal" data-category="photoshop">
+          <div class="placeholder-media"><span>05</span><strong>PHOTOSHOP</strong><small>DROP YOUR POSTERS / COMPOSITES / EXPERIMENTS HERE</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>Photoshop archive slot</small></div><span>PS</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="davinci">
+          <div class="placeholder-media"><span>06</span><strong>DAVINCI RESOLVE</strong><small>EDITING / COLOR / CINEMA / SHORT FORM</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>DaVinci archive slot</small></div><span>DR</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="after-effects">
+          <div class="placeholder-media"><span>07</span><strong>AFTER EFFECTS</strong><small>MOTION / VFX / COMPOSITING / TYPE</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>After Effects archive slot</small></div><span>AE</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="edits">
+          <div class="placeholder-media"><span>08</span><strong>EDITS</strong><small>SHORT-FORM / TRANSITIONS / RHYTHM</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>Edit archive slot</small></div><span>EDIT</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="motion">
+          <div class="placeholder-media"><span>09</span><strong>MOTION DESIGN</strong><small>LOOPS / TITLES / GRAPHICS / EXPERIMENTS</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>Motion design archive slot</small></div><span>MOTION</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="code">
+          <div class="placeholder-media"><span>10</span><strong>CODES</strong><small>MANUAL CODE / VIBE CODED / WEB EXPERIMENTS</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>Code archive slot</small></div><span>CODE</span></div>
+        </article>
+        <article class="project placeholder reveal" data-category="tools">
+          <div class="placeholder-media"><span>11</span><strong>TOOLS I BUILT</strong><small>MINI APPS / GENERATORS / UTILITIES / PLAYGROUNDS</small><i>+</i></div>
+          <div class="project-meta"><div><b>UP NEXT</b><small>Tools archive slot</small></div><span>LAB</span></div>
+        </article>
+      </div>
+      <p class="archive-note">MEDIA READY — drop your MP4 into <code>assets/media/hero.mp4</code> and your MP3 into <code>assets/audio/song.mp3</code>. MORE WORK CAN BE ADDED WITHOUT CHANGING THE SITE — JUST COPY A PROJECT CARD, change its category and point it at your file.</p>
+    </section>
+
+    <section id="about" class="about pad">
+      <div class="section-head"><span>02</span><span>ABOUT AYUSH</span><span>THE HUMAN</span></div>
+      <div class="about-grid">
+        <div class="about-title">STILL<br><span>LEARNING.</span><br>STILL BUILDING.</div>
+        <div class="about-copy">
+          <p class="lead">I’m <strong>Ayush Nautiyal</strong>, a 17-year-old student currently studying in 12th grade in India.</p>
+          <p>I spend a lot of my free time learning things the classroom does not really cover for me — Blender and 3D, motion design, video editing, Photoshop, websites, coding and generative AI.</p>
+          <p>This site is basically my public notebook: the work is not supposed to be perfect. It is here to show what I can make, what I am experimenting with, and how fast I am improving.</p>
+          <div class="facts">
+            <div><small>STUDY</small><b>CLASS XII</b></div>
+            <div><small>AGE</small><b>17</b></div>
+            <div><small>BASE</small><b>INDIA</b></div>
+            <div><small>EXTRA</small><b>CHESS</b></div>
+          </div>
+          <div class="signature">AYUSH / NAUTIYAL</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills pad">
+      <div class="section-head"><span>03</span><span>TOOLBOX</span><span>LEARNING IN PUBLIC</span></div>
+      <div class="skill-list">
+        <div><span>BLENDER</span><small>3D / ENVIRONMENTS / LIGHTING</small></div>
+        <div><span>DAVINCI RESOLVE</span><small>EDITING / COLOR / TIMELINES</small></div>
+        <div><span>AFTER EFFECTS</span><small>MOTION / VFX / COMPOSITING</small></div>
+        <div><span>PHOTOSHOP</span><small>POSTERS / COMPOSITES / GRAPHICS</small></div>
+        <div><span>HTML / CSS / JS</span><small>WEBSITES / UI / INTERACTION</small></div>
+        <div><span>GENERATIVE AI</span><small>VISUALS / IDEATION / EXPERIMENTS</small></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact pad">
+      <div class="section-head"><span>04</span><span>CONTACT</span><span>LINKS</span></div>
+      <div class="contact-main">
+        <div>
+          <div class="tiny-label">COLLAB / FEEDBACK / PROJECTS / RANDOM IDEAS</div>
+          <h2>LET’S<br><span>MAKE</span><br>SOMETHING.</h2>
+        </div>
+        <div class="contact-links">
+          <a class="big-link" href="mailto:tuffgmailforme@gmail.com">EMAIL <span>↗</span></a>
+          <a class="big-link" href="https://www.instagram.com/steven_agonist/" target="_blank" rel="noreferrer">INSTAGRAM <span>↗</span></a>
+          <a class="big-link" href="https://github.com/lastofcast-blip" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a>
+        </div>
+      </div>
+      <footer><span>AYUSH NAUTIYAL / INDIA</span><span>© 2026</span><span>BUILT FOR GITHUB PAGES</span></footer>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-lightbox" id="closeLightbox" aria-label="Close image viewer">×</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
