@@ -13,3 +13,5 @@
 
 [Live Preview](#-key-features) • [Directory Structure](#-directory-structure) • [Setup & Installation](#-quick-start) • [Contact](#-contact--links)
 
+git clone [https://github.com/lastofcast-blip/portfolio.git](https://github.com/lastofcast-blip/portfolio.git)
+cd portfolio
