@@ -14,6 +14,9 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
 
+  <!-- 3D Interactive Canvas -->
+  <canvas id="canvas3d"></canvas>
+
   <!-- Hero Background Video -->
   <div class="hero-media-bg" id="heroMediaBg" aria-hidden="true">
     <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
@@ -33,9 +36,9 @@
     <span class="audio-label">SOUND OFF</span>
   </button>
 
+  <!-- Blackhole Overlay Layer -->
   <div class="black-hole" id="blackHole" aria-hidden="true">
-    <div class="black-hole-glow"></div>
-    <div class="black-hole-core"></div>
+    <img src="assets/media/blackhole.png" alt="Black Hole Background" class="black-hole-img" id="blackHoleImg">
   </div>
 
   <div class="cursor" aria-hidden="true"></div>
@@ -53,7 +56,8 @@
     <nav>
       <a href="#work">WORK <span>01</span></a>
       <a href="#about">ABOUT <span>02</span></a>
-      <a href="#contact">CONTACT <span>03</span></a>
+      <a href="#notion">NOTION <span>03</span></a>
+      <a href="#contact">CONTACT <span>04</span></a>
     </nav>
     <div class="menu-foot">AYUSH NAUTIYAL / 2026</div>
   </aside>
@@ -158,8 +162,35 @@
       </div>
     </section>
 
+    <!-- Notion Integration Section -->
+    <section id="notion" class="notion-section pad">
+      <div class="section-head"><span>03</span><span>NOTION WORKSPACE</span><span>NOTES & LAB</span></div>
+      <div class="notion-container glass-panel">
+        <div class="notion-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="notion-title">AYUSH'S CREATIVE LAB & NOTES</span>
+        </div>
+        <!-- Replace src link below with your Notion public page URL -->
+        <iframe class="notion-iframe" src="https://v1.embednotion.com/e/your-notion-page" title="Notion Board"></iframe>
+      </div>
+    </section>
+
+    <!-- Bottom Contact & Ending Video Panel -->
     <section id="contact" class="contact pad">
-      <div class="section-head"><span>03</span><span>CONTACT</span><span>DIRECT</span></div>
+      <div class="section-head"><span>04</span><span>CONTACT & SHOWCASE</span><span>DIRECT</span></div>
+      
+      <!-- Ending Video Display Panel -->
+      <div class="bottom-video-container glass-panel">
+        <video class="bottom-video" id="bottomVideo" autoplay muted loop playsinline preload="auto">
+          <source src="assets/media/ending.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <span>ORIGINS / OUTRO SHOWCASE</span>
+        </div>
+      </div>
+
       <div class="contact-main">
         <div>
           <div class="tiny-label">COLLAB / PROJECTS / DIRECT</div>
@@ -183,6 +214,8 @@
     </figure>
   </div>
 
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
