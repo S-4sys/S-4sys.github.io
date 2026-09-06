@@ -22,6 +22,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Minimal Video Player & Interactive Tab Drawer System
+  const playerVideo = document.getElementById('playerVideo');
+  const minimalPlayBtn = document.getElementById('minimalPlayBtn');
+  const iconPlay = minimalPlayBtn?.querySelector('.icon-play');
+  const iconPause = minimalPlayBtn?.querySelector('.icon-pause');
+  
+  const tabToggleBtn = document.getElementById('tabToggleBtn');
+  const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+  const videoDrawer = document.getElementById('videoDrawer');
+  const videoCards = document.querySelectorAll('.video-card');
+
+  if (playerVideo && minimalPlayBtn) {
+    const toggleVideoState = () => {
+      if (playerVideo.paused) {
+        playerVideo.play();
+        iconPlay?.classList.add('hidden');
+        iconPause?.classList.remove('hidden');
+      } else {
+        playerVideo.pause();
+        iconPlay?.classList.remove('hidden');
+        iconPause?.classList.add('hidden');
+      }
+    };
+
+    minimalPlayBtn.addEventListener('click', toggleVideoState);
+
+    playerVideo.addEventListener('ended', () => {
+      iconPlay?.classList.remove('hidden');
+      iconPause?.classList.add('hidden');
+    });
+  }
+
+  // Drawer Tab Logic
+  if (tabToggleBtn && videoDrawer && closeDrawerBtn) {
+    tabToggleBtn.addEventListener('click', () => videoDrawer.classList.add('open'));
+    closeDrawerBtn.addEventListener('click', () => videoDrawer.classList.remove('open'));
+
+    videoCards.forEach(card => {
+      card.addEventListener('click', () => {
+        videoCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        
+        const videoSrc = card.dataset.src;
+        if (playerVideo && videoSrc) {
+          playerVideo.src = videoSrc;
+          playerVideo.play();
+          iconPlay?.classList.add('hidden');
+          iconPause?.classList.remove('hidden');
+        }
+        videoDrawer.classList.remove('open');
+      });
+    });
+  }
+
   // Work Category Filtering
   const filters = [...document.querySelectorAll('.filter')];
   const cards = [...document.querySelectorAll('.project')];
@@ -101,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (window.matchMedia('(pointer:fine)').matches && cursor) {
-    document.querySelectorAll('a, button, .media').forEach(el => {
+    document.querySelectorAll('a, button, .media, .video-card').forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('active'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
     });
@@ -163,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Interactive Floating 3D Geometries
     const geometries = [
       new THREE.IcosahedronGeometry(1.2, 0),
       new THREE.TorusGeometry(1, 0.3, 16, 50),
@@ -193,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
       meshes.push(mesh);
     }
 
-    // Particle Stars Field
     const particlesGeo = new THREE.BufferGeometry();
     const count = 400;
     const posArray = new Float32Array(count * 3);
@@ -207,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     camera.position.z = 8;
 
-    // Animation Loop with Mouse Interaction
     const animate3D = () => {
       requestAnimationFrame(animate3D);
 
@@ -217,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
         m.position.x += Math.sin(Date.now() * 0.001 + idx) * 0.002;
       });
 
-      // Mouse interactive tilt/parallax
       camera.position.x += (mouseX * 1.5 - camera.position.x) * 0.05;
       camera.position.y += (mouseY * 1.5 - camera.position.y) * 0.05;
       camera.lookAt(scene.position);
@@ -233,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll Performance Engine for Background FX
+  // Scroll Performance Engine
   const hero = document.querySelector('.hero');
   const video = document.getElementById('heroVideo');
   const blackHole = document.getElementById('blackHole');
@@ -254,7 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
       video.style.filter = `blur(${blur}px) saturate(${(1 - progress * 0.5).toFixed(2)})`;
       video.style.transform = `scale(${scale})`;
 
-      // Blackhole overlay appearance & mouse parallax scale
       blackHole.style.opacity = (progress * 0.95).toFixed(3);
       if (blackHoleImg) {
         blackHoleImg.style.transform = `scale(${1 + progress * 0.08 + mouseX * 0.02}) translate3d(${mouseX * 15}px, ${-mouseY * 15}px, 0)`;
