@@ -1,32 +1,31 @@
-# Ayush Nautiyal — GitHub Pages Portfolio
+<div align="center">
 
-## Put your hero video here
-`assets/media/hero.mp4`
+# 🌌 AYUSH NAUTIYAL — PERSONAL PORTFOLIO ARCHIVE (2026)
 
-Recommended:
-- MP4 / H.264
-- 1920×1080 or 1080×1920
-- 10–40 seconds
-- 5–30 MB after compression
-- no audio track needed (the page has a separate music player)
+**An interactive 3D, motion-driven portfolio and creative laboratory built with modern web technologies.**
 
-The video is:
-- muted + autoplay
-- looping
-- full-screen on desktop and mobile
-- slightly transparent so the typography stays readable
-- compressed/scaled/blurred as the visitor scrolls away from the hero
-- replaced by a black-hole-style background as the hero exits
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](#)
 
-## Put your background song here
-`assets/audio/song.mp3`
+<br/>
 
-The page deliberately does **not** force sound on automatically because modern browsers commonly block audible autoplay. Visitors can tap the `SOUND OFF` button in the bottom-right corner to start/stop the song.
+[Live Preview](#-key-features) • [Directory Structure](#-directory-structure) • [Setup & Installation](#-quick-start) • [Contact](#-contact--links)
 
-## Contact links currently set
-- Email: `tuffgmailforme@gmail.com`
-- Instagram: `https://www.instagram.com/steven_agonist/`
-- GitHub: `https://github.com/lastofcast-blip`
+<br/><div align="center">
 
-## GitHub Pages
-Upload the contents of this folder to a repository, then enable **Settings → Pages → Deploy from a branch → main → /(root)**.
+# 🌌 AYUSH NAUTIYAL — PERSONAL PORTFOLIO ARCHIVE (2026)
+
+**An interactive 3D, motion-driven portfolio and creative laboratory built with modern web technologies.**
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](#)
+
+<br/>
+
+[Live Preview](#-key-features) • [Directory Structure](#-directory-structure) • [Setup & Installation](#-quick-start) • [Contact](#-contact--links)
+
+<br/>
