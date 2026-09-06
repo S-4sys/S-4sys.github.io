@@ -10,121 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
-  <style>
-    /* Brutalistic Floating Reel Window */
-    .brutalist-window {
-      position: relative;
-      max-width: 900px;
-      margin: 80px auto;
-      background: rgba(10, 10, 10, 0.45);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .brutalist-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #888;
-    }
-
-    .brutalist-dots {
-      display: flex;
-      gap: 6px;
-    }
-
-    .brutalist-dots span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .brutalist-content {
-      position: relative;
-      padding: 40px 20px 20px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Borderless video setup */
-    .borderless-video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 720px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .borderless-video {
-      width: 100%;
-      height: auto;
-      max-height: 500px;
-      object-fit: contain;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      mix-blend-mode: screen; /* Blends dark video backgrounds directly into canvas */
-      filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.05));
-    }
-
-    /* Brutalist Control Button Underneath */
-    .brutalist-controls {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .reel-play-btn {
-      background: #ffffff;
-      color: #000000;
-      border: none;
-      padding: 14px 32px;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .reel-play-btn:hover {
-      background: #e0e0e0;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
-    }
-
-    .reel-play-btn:active {
-      transform: translateY(0);
-    }
-
-    .reel-status {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
-      color: #666;
-      letter-spacing: 0.1em;
-    }
-  </style>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -183,7 +68,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="tiny-label">17 / CLASS XII / INDIA<br>DESIGN × CODE × MOTION × 3D</div>
-          <h1>AYUSH<br><span>NAUTIYAL</span><br><em>WORK / LAB</em></h1>
+          <h1 class="animated-heading">AYUSH<br><span>NAUTIYAL</span><br><em>WORK / LAB</em></h1>
           <p class="hero-sub">A personal playground for renders, edits, websites, motion experiments, and creative coding.</p>
           <a class="round-cta magnetic" href="#work"><span>ENTER<br>ARCHIVE</span><b>↘</b></a>
         </div>
@@ -191,7 +76,7 @@
           <div class="radar"></div>
           <div class="orb orb-a"></div>
           <div class="orb orb-b"></div>
-          <div class="hero-card glass-panel">
+          <div class="hero-card glass-panel float-animation">
             <div class="card-top"><span>LIVE / 001</span><span>IND</span></div>
             <div class="card-big">17</div>
             <div class="card-mid">BUILDING<br>WHILE LEARNING</div>
@@ -211,7 +96,7 @@
       <div class="section-head"><span>01</span><span>SELECTED WORK</span><span>2026 / ARCHIVE</span></div>
       <div class="statement-row">
         <div class="microcopy">3D / CGI<br>EDITING<br>COMPOSITING<br>VISUAL DESIGN<br>CREATIVE CODING</div>
-        <div class="statement">MAKING THINGS<br>FROM <strong>IDEA</strong><br>TO <strong>OUTPUT.</strong></div>
+        <div class="statement animated-text">MAKING THINGS<br>FROM <strong>IDEA</strong><br>TO <strong>OUTPUT.</strong></div>
       </div>
 
       <div class="filters" role="tablist" aria-label="Work categories">
@@ -227,7 +112,7 @@
 
       <div class="projects" id="projectGrid">
         <article class="project project-large reveal" data-category="blender">
-          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-day.webp" data-caption="Jungle Mountain — Daylight Environment Render">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-day.webp" data-caption="Jungle Mountain — Daylight Environment Render">
             <img src="assets/blender/jungle-mountain-day.webp" alt="Blender mountain landscape render">
             <span class="media-number">01</span><span class="view-tag">VIEW ↗</span>
           </button>
@@ -235,7 +120,7 @@
         </article>
 
         <article class="project reveal" data-category="blender">
-          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-field.webp" data-caption="Jungle Mountain — Wide Field Shot">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-field.webp" data-caption="Jungle Mountain — Wide Field Shot">
             <img src="assets/blender/jungle-mountain-field.webp" alt="Blender field render">
             <span class="media-number">02</span><span class="view-tag">VIEW ↗</span>
           </button>
@@ -243,7 +128,7 @@
         </article>
 
         <article class="project reveal" data-category="blender">
-          <button class="media real-media" data-lightbox="assets/blender/jungle-mountain-night.webp" data-caption="Jungle Mountain — Night Atmosphere">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-night.webp" data-caption="Jungle Mountain — Night Atmosphere">
             <img src="assets/blender/jungle-mountain-night.webp" alt="Blender mountain render at night">
             <span class="media-number">03</span><span class="view-tag">VIEW ↗</span>
           </button>
@@ -251,7 +136,7 @@
         </article>
 
         <article class="project project-large reveal" data-category="blender">
-          <button class="media real-media" data-lightbox="assets/blender/blender-cyberpunk-jungle.webp" data-caption="Cyberpunk Jungle — Stylized Vehicle Scene">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/blender-cyberpunk-jungle.webp" data-caption="Cyberpunk Jungle — Stylized Vehicle Scene">
             <img src="assets/blender/blender-cyberpunk-jungle.webp" alt="Stylized Blender jungle scene">
             <span class="media-number">04</span><span class="view-tag">VIEW ↗</span>
           </button>
@@ -263,7 +148,7 @@
     <section id="about" class="about pad">
       <div class="section-head"><span>02</span><span>ABOUT</span><span>THE HUMAN</span></div>
       <div class="about-grid">
-        <div class="about-title">STILL<br><span>LEARNING.</span><br>STILL BUILDING.</div>
+        <div class="about-title animated-heading">STILL<br><span>LEARNING.</span><br>STILL BUILDING.</div>
         <div class="about-copy">
           <p class="lead">I’m <strong>Ayush Nautiyal</strong>, a 17-year-old student studying in India.</p>
           <p>I focus on 3D environments, motion design, video production, web design, and algorithmic visual experiments.</p>
@@ -277,31 +162,47 @@
       </div>
     </section>
 
-    <!-- BRUTALISTIC POPUP REEL WINDOW -->
-    <section id="reel" class="pad">
+    <!-- MINIMALIST FLOATING VIDEO PLAYER -->
+    <section id="reel" class="pad reel-section">
       <div class="section-head"><span>03</span><span>EDIT SHOWCASE</span><span>SHOWREEL / 2026</span></div>
       
-      <div class="brutalist-window">
-        <div class="brutalist-bar">
-          <div class="brutalist-dots">
-            <span></span><span></span><span></span>
-          </div>
-          <div>EDIT_REEL_v01.mp4</div>
-          <div>[RAW_FRAME]</div>
-        </div>
-        
-        <div class="brutalist-content">
-          <div class="borderless-video-wrapper">
-            <video class="borderless-video" id="editReelVideo" playsinline preload="metadata">
-              <source src="assets/media/ending.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="brutalist-controls">
-            <button class="reel-play-btn" id="reelPlayBtn" type="button">
-              <span id="playIcon">▶</span> <span id="playText">PLAY REEL</span>
+      <div class="minimal-player-wrapper reveal">
+        <div class="player-screen">
+          <video class="player-video" id="playerVideo" playsinline preload="metadata">
+            <source src="assets/videos/vid1.mp4" type="video/mp4">
+          </video>
+          
+          <div class="player-controls">
+            <button class="minimal-play-btn" id="minimalPlayBtn" aria-label="Play/Pause Video">
+              <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
+              <svg class="icon-pause hidden" viewBox="0 0 24 24" width="20" height="20"><rect x="5" y="4" width="4" height="16" fill="currentColor"/><rect x="15" y="4" width="4" height="16" fill="currentColor"/></svg>
             </button>
-            <div class="reel-status" id="reelStatus">[STATUS: PAUSED]</div>
+            <button class="tab-toggle-btn" id="tabToggleBtn" aria-label="Open video selection tab">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>OPEN PLAYER</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sliding Selection Drawer Tab -->
+        <div class="video-tab-drawer" id="videoDrawer">
+          <div class="drawer-header">
+            <span>SELECT VIDEO</span>
+            <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Tab">×</button>
+          </div>
+          <div class="drawer-grid">
+            <div class="video-card active" data-src="assets/videos/vid1.mp4">
+              <div class="card-thumb">VID 01</div>
+              <span>REEL EDITION 01</span>
+            </div>
+            <div class="video-card" data-src="assets/videos/vid2.mp4">
+              <div class="card-thumb">VID 02</div>
+              <span>REEL EDITION 02</span>
+            </div>
+            <div class="video-card" data-src="assets/videos/vid3.mp4">
+              <div class="card-thumb">VID 03</div>
+              <span>REEL EDITION 03</span>
+            </div>
           </div>
         </div>
       </div>
@@ -314,7 +215,7 @@
       <div class="contact-main">
         <div>
           <div class="tiny-label">COLLAB / PROJECTS / DIRECT</div>
-          <h2>LET’S<br><span>MAKE</span><br>SOMETHING.</h2>
+          <h2 class="animated-heading">LET’S<br><span>MAKE</span><br>SOMETHING.</h2>
         </div>
         <div class="contact-links">
           <a class="big-link" href="mailto:tuffgmailforme@gmail.com">EMAIL <span>↗</span></a>
@@ -334,39 +235,7 @@
     </figure>
   </div>
 
-  <!-- Three.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
-
-  <!-- Script for brutalist video play button -->
-  <script>
-    const reelVideo = document.getElementById('editReelVideo');
-    const reelPlayBtn = document.getElementById('reelPlayBtn');
-    const playIcon = document.getElementById('playIcon');
-    const playText = document.getElementById('playText');
-    const reelStatus = document.getElementById('reelStatus');
-
-    if (reelVideo && reelPlayBtn) {
-      reelPlayBtn.addEventListener('click', () => {
-        if (reelVideo.paused) {
-          reelVideo.play();
-          playIcon.textContent = '❚❚';
-          playText.textContent = 'PAUSE REEL';
-          reelStatus.textContent = '[STATUS: PLAYING]';
-        } else {
-          reelVideo.pause();
-          playIcon.textContent = '▶';
-          playText.textContent = 'PLAY REEL';
-          reelStatus.textContent = '[STATUS: PAUSED]';
-        }
-      });
-
-      reelVideo.addEventListener('ended', () => {
-        playIcon.textContent = '▶';
-        playText.textContent = 'REPLAY REEL';
-        reelStatus.textContent = '[STATUS: ENDED]';
-      });
-    }
-  </script>
 </body>
 </html>
