@@ -286,10 +286,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Scroll Performance Engine
   const hero = document.querySelector('.hero');
   const video = document.getElementById('heroVideo');
-  const blackHole = document.getElementById('blackHole');
-  const blackHoleImg = document.getElementById('blackHoleImg');
+  const cardBlackHoleImg = document.getElementById('cardBlackHoleImg');
 
-  if (hero && video && blackHole) {
+  if (hero && video) {
     let ticking = false;
 
     const onScroll = () => {
@@ -304,9 +303,8 @@ document.addEventListener('DOMContentLoaded', () => {
       video.style.filter = `blur(${blur}px) saturate(${(1 - progress * 0.5).toFixed(2)})`;
       video.style.transform = `scale(${scale})`;
 
-      blackHole.style.opacity = (progress * 0.95).toFixed(3);
-      if (blackHoleImg) {
-        blackHoleImg.style.transform = `scale(${1 + progress * 0.08 + mouseX * 0.02}) translate3d(${mouseX * 15}px, ${-mouseY * 15}px, 0)`;
+      if (cardBlackHoleImg) {
+        cardBlackHoleImg.style.transform = `scale(${1 + progress * 0.05})`;
       }
 
       ticking = false;
