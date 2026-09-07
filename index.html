@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ayush Nautiyal — Student creator building in 3D, motion design, code, and creative editing.">
+  <meta name="theme-color" content="#050505">
+  <title>AYUSH NAUTIYAL — PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- 3D Interactive Canvas -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- Hero Background Video -->
+  <div class="hero-media-bg" id="heroMediaBg" aria-hidden="true">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+      <source src="assets/media/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-media-overlay"></div>
+  </div>
+
+  <!-- Ambient Audio Track -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Audio Controls -->
+  <button class="audio-toggle" id="audioToggle" type="button" aria-label="Toggle background audio">
+    <span class="audio-icon">♫</span>
+    <span class="audio-label">SOUND OFF</span>
+  </button>
+
+  <!-- Blackhole Overlay Layer -->
+  <div class="black-hole" id="blackHole" aria-hidden="true">
+    <img src="assets/media/blackhole.png" alt="Black Hole Background" class="black-hole-img" id="blackHoleImg">
+  </div>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="mail" href="mailto:tuffgmailforme@gmail.com" aria-label="Email Ayush">✉</a>
+    <a class="brand" href="#top" aria-label="Back to top"><span>AN</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <aside class="menu" id="menu" aria-hidden="true">
+    <nav>
+      <a href="#work">WORK <span>01</span></a>
+      <a href="#about">ABOUT <span>02</span></a>
+      <a href="#reel">REEL <span>03</span></a>
+      <a href="#contact">CONTACT <span>04</span></a>
+    </nav>
+    <div class="menu-foot">AYUSH NAUTIYAL / 2026</div>
+  </aside>
+
+  <main id="top">
+    <section class="hero pad">
+      <div class="eyebrow">( CREATIVE ARCHIVE / OPEN FOR EXPLORATION )</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="tiny-label">17 / CLASS XII / INDIA<br>DESIGN × CODE × MOTION × 3D</div>
+          <h1 class="animated-heading">AYUSH<br><span>NAUTIYAL</span><br><em>WORK / LAB</em></h1>
+          <p class="hero-sub">A personal playground for renders, edits, websites, motion experiments, and creative coding.</p>
+          <a class="round-cta magnetic" href="#work"><span>ENTER<br>ARCHIVE</span><b>↘</b></a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="radar"></div>
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="hero-card glass-panel float-animation">
+            <div class="card-top"><span>LIVE / 001</span><span>IND</span></div>
+            <div class="card-big">17</div>
+            <div class="card-mid">BUILDING<br>WHILE LEARNING</div>
+            <div class="card-bottom"><span>CHESS / 3D / CODE</span><span>SCROLL ↘</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>SCROLL</span><i></i><span>↘</span></div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div>BLENDER • PHOTOSHOP • DAVINCI RESOLVE • AFTER EFFECTS • MOTION DESIGN • CODE • GEN AI • CHESS • </div>
+      <div>BLENDER • PHOTOSHOP • DAVINCI RESOLVE • AFTER EFFECTS • MOTION DESIGN • CODE • GEN AI • CHESS • </div>
+    </section>
+
+    <section id="work" class="pad work-section">
+      <div class="section-head"><span>01</span><span>SELECTED WORK</span><span>2026 / ARCHIVE</span></div>
+      <div class="statement-row">
+        <div class="microcopy">3D / CGI<br>EDITING<br>COMPOSITING<br>VISUAL DESIGN<br>CREATIVE CODING</div>
+        <div class="statement animated-text">MAKING THINGS<br>FROM <strong>IDEA</strong><br>TO <strong>OUTPUT.</strong></div>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Work categories">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+        <button class="filter" data-filter="blender" role="tab" aria-selected="false">BLENDER</button>
+        <button class="filter" data-filter="photoshop" role="tab" aria-selected="false">PHOTOSHOP</button>
+        <button class="filter" data-filter="davinci" role="tab" aria-selected="false">DAVINCI</button>
+        <button class="filter" data-filter="after-effects" role="tab" aria-selected="false">AFTER EFFECTS</button>
+        <button class="filter" data-filter="edits" role="tab" aria-selected="false">EDITS</button>
+        <button class="filter" data-filter="motion" role="tab" aria-selected="false">MOTION</button>
+        <button class="filter" data-filter="code" role="tab" aria-selected="false">CODE</button>
+      </div>
+
+      <div class="projects" id="projectGrid">
+        <article class="project project-large reveal" data-category="blender">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-day.webp" data-caption="Jungle Mountain — Daylight Environment Render">
+            <img src="assets/blender/jungle-mountain-day.webp" alt="Blender mountain landscape render">
+            <span class="media-number">01</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>JUNGLE MOUNTAIN</b><small>Blender / Environment / Foliage</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project reveal" data-category="blender">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-field.webp" data-caption="Jungle Mountain — Wide Field Shot">
+            <img src="assets/blender/jungle-mountain-field.webp" alt="Blender field render">
+            <span class="media-number">02</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>FIELD / MOUNTAIN</b><small>Blender / Landscape</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project reveal" data-category="blender">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/jungle-mountain-night.webp" data-caption="Jungle Mountain — Night Atmosphere">
+            <img src="assets/blender/jungle-mountain-night.webp" alt="Blender mountain render at night">
+            <span class="media-number">03</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>AFTER DARK</b><small>Blender / Lighting</small></div><span>BLENDER</span></div>
+        </article>
+
+        <article class="project project-large reveal" data-category="blender">
+          <button class="media real-media hover-tilt" data-lightbox="assets/blender/blender-cyberpunk-jungle.webp" data-caption="Cyberpunk Jungle — Stylized Vehicle Scene">
+            <img src="assets/blender/blender-cyberpunk-jungle.webp" alt="Stylized Blender jungle scene">
+            <span class="media-number">04</span><span class="view-tag">VIEW ↗</span>
+          </button>
+          <div class="project-meta"><div><b>MINECRAFT JUNGLE</b><small>Blender / Lighting / Vehicle</small></div><span>BLENDER</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about pad">
+      <div class="section-head"><span>02</span><span>ABOUT</span><span>THE HUMAN</span></div>
+      <div class="about-grid">
+        <div class="about-title animated-heading">STILL<br><span>LEARNING.</span><br>STILL BUILDING.</div>
+        <div class="about-copy">
+          <p class="lead">I’m <strong>Ayush Nautiyal</strong>, a 17-year-old student studying in India.</p>
+          <p>I focus on 3D environments, motion design, video production, web design, and algorithmic visual experiments.</p>
+          <div class="facts">
+            <div><small>STUDY</small><b>CLASS XII</b></div>
+            <div><small>AGE</small><b>17</b></div>
+            <div><small>BASE</small><b>INDIA</b></div>
+            <div><small>EXTRA</small><b>CHESS</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINIMALIST FLOATING VIDEO PLAYER -->
+    <section id="reel" class="pad reel-section">
+      <div class="section-head"><span>03</span><span>EDITS</span><span>-_-</span></div>
+      
+      <div class="minimal-player-wrapper reveal">
+        <div class="player-screen">
+          <video class="player-video" id="playerVideo" playsinline preload="metadata">
+            <source src="assets/videos/vid1.mp4" type="video/mp4">
+          </video>
+          
+          <div class="player-controls">
+            <button class="minimal-play-btn" id="minimalPlayBtn" aria-label="Play/Pause Video">
+              <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
+              <svg class="icon-pause hidden" viewBox="0 0 24 24" width="20" height="20"><rect x="5" y="4" width="4" height="16" fill="currentColor"/><rect x="15" y="4" width="4" height="16" fill="currentColor"/></svg>
+            </button>
+            
+          </div>
+        </div>
+
+        <!-- Sliding Selection Drawer Tab -->
+        <div class="video-tab-drawer" id="videoDrawer">
+          <div class="drawer-header">
+            <span>SELECT VIDEO</span>
+            <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Tab">×</button>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Contact Panel -->
+    <section id="contact" class="contact pad">
+      <div class="section-head"><span>04</span><span>CONTACT & SHOWCASE</span><span>DIRECT</span></div>
+
+      <div class="contact-main">
+        <div>
+          <div class="tiny-label">COLLAB / PROJECTS / DIRECT</div>
+          <h2 class="animated-heading">LET’S<br><span>MAKE</span><br>SOMETHING.</h2>
+        </div>
+        <div class="contact-links">
+          <a class="big-link" href="mailto:tuffgmailforme@gmail.com">EMAIL <span>↗</span></a>
+          <a class="big-link" href="https://www.instagram.com/steven_agonist/" target="_blank" rel="noreferrer">INSTAGRAM <span>↗</span></a>
+          <a class="big-link" href="https://github.com/S-4sys" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a>
+        </div>
+      </div>
+      <footer><span>AYUSH NAUTIYAL / INDIA</span><span>© 2026</span></footer>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-lightbox" id="closeLightbox" aria-label="Close viewer">×</button>
+    <figure>
+      <img id="lightboxImg" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
