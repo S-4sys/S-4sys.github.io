@@ -512,32 +512,3 @@ footer { border-top: 1px solid var(--line); padding-top: 16px; display: flex; ju
   .cursor, .cursor-dot { display: none; }
   .video-tab-drawer { width: 100%; }
 }
-/* ==========================================
-   PERFORMANCE & MOBILE OPTIMIZATIONS
-   ========================================== */
-
-/* Disable GPU-heavy operations on mobile screens */
-@media (max-width: 768px) {
-  /* Remove heavy real-time CSS filters on video */
-  video, 
-  .hero-video,
-  #heroVideo {
-    filter: none !important;
-    transform: translateZ(0) !important;
-    will-change: transform;
-    opacity: 0.35;
-  }
-
-  /* Disable grain overlay that causes severe canvas repaints */
-  .grain,
-  .noise-overlay {
-    display: none !important;
-  }
-
-  /* Reduce costly backdrop-blur computations on cards */
-  .hero-card,
-  .glass-panel {
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
-  }
-}
