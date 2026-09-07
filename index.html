@@ -36,11 +36,6 @@
     <span class="audio-label">SOUND OFF</span>
   </button>
 
-  <!-- Blackhole Overlay Layer -->
-  <div class="black-hole" id="blackHole" aria-hidden="true">
-    <img src="assets/media/blackhole.png" alt="Black Hole Background" class="black-hole-img" id="blackHoleImg">
-  </div>
-
   <div class="cursor" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
@@ -78,6 +73,9 @@
           <div class="orb orb-b"></div>
           <div class="hero-card glass-panel float-animation">
             <div class="card-top"><span>LIVE / 001</span><span>IND</span></div>
+            <div class="card-media-overlay">
+              <img src="assets/media/blackhole.png" alt="Black Hole Preview" class="card-blackhole-img" id="cardBlackHoleImg">
+            </div>
             <div class="card-big">17</div>
             <div class="card-mid">BUILDING<br>WHILE LEARNING</div>
             <div class="card-bottom"><span>CHESS / 3D / CODE</span><span>SCROLL ↘</span></div>
@@ -177,7 +175,6 @@
               <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
               <svg class="icon-pause hidden" viewBox="0 0 24 24" width="20" height="20"><rect x="5" y="4" width="4" height="16" fill="currentColor"/><rect x="15" y="4" width="4" height="16" fill="currentColor"/></svg>
             </button>
-            
           </div>
         </div>
 
@@ -186,8 +183,6 @@
           <div class="drawer-header">
             <span>SELECT VIDEO</span>
             <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Tab">×</button>
-          </div>
-          
           </div>
         </div>
       </div>
