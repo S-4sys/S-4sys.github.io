@@ -153,41 +153,49 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .hero-visual { min-height: 480px; position: relative; display: grid; place-items: center; }
 
 /* Hero Card & Inner Media Layout */
+/* Hero Card Container */
 .hero-card {
   position: relative;
-  width: min(100%, 400px);
-  aspect-ratio: 4/5;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
-  border-radius: 8px;
-  overflow: hidden;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden; /* Force-clip anything outside bounds */
   box-sizing: border-box;
 }
 
+/* Inner Frame for Media */
 .card-media-overlay {
+  position: relative;
   width: 100%;
   max-width: 100%;
   height: 140px;
-  margin: 12px 0;
+  margin: 10px 0;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: hidden; /* Clips image scaling */
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   flex-shrink: 0;
+  min-width: 0; /* Prevents flexbox intrinsic expansion */
 }
 
-.card-blackhole-img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  display: block;
+/* Image Fitted Inside Card Box */
+.card-blackhole-img,
+#cardBlackHoleImg {
+  position: static !important; /* Removes legacy fixed/absolute positioning */
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important; /* Scales graphic down to fit within box */
+  display: block !important;
   filter: brightness(0.9) contrast(1.1);
   transition: transform 0.3s ease;
 }
