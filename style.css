@@ -151,6 +151,8 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
 .round-cta:hover:after { transform: translateY(0); }
 
 .hero-visual { min-height: 480px; position: relative; display: grid; place-items: center; }
+
+/* Hero Card & Inner Media Layout */
 .hero-card {
   position: relative;
   width: min(100%, 400px);
@@ -160,7 +162,31 @@ button { font: inherit; color: inherit; background: none; border: none; padding:
   justify-content: space-between;
   padding: 24px;
   border-radius: 8px;
+  overflow: hidden;
 }
+
+.card-media-overlay {
+  width: 100%;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-blackhole-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
 .card-top, .card-bottom { font: 10px "DM Mono", monospace; color: var(--muted); display: flex; justify-content: space-between; }
 .card-big { font-size: clamp(100px, 16vw, 200px); font-weight: 900; letter-spacing: -0.1em; line-height: 0.7; }
 .card-mid { align-self: flex-end; text-align: right; font: 11px/1.4 "DM Mono", monospace; color: var(--accent); }
@@ -451,25 +477,6 @@ footer { border-top: 1px solid var(--line); padding-top: 16px; display: flex; ju
   position: absolute; 
   inset: 0; 
   background: linear-gradient(180deg, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.7) 70%, #050505 100%); 
-}
-
-.black-hole { 
-  position: fixed; 
-  inset: 0; 
-  z-index: -20; 
-  pointer-events: none; 
-  opacity: 0; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.1s linear, transform 0.1s linear; 
-}
-.black-hole-img {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  will-change: transform;
 }
 
 .audio-toggle {
