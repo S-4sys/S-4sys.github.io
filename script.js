@@ -318,3 +318,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 });
+// ==========================================
+// PERFORMANCE & SCROLL OBSERVER LOGIC
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const isMobile = window.innerWidth <= 768;
+
+  // 1. Optimize Three.js Renderer (if initialized in your script)
+  if (typeof renderer !== 'undefined') {
+    // Force pixel ratio to 1 on mobile to prevent GPU overheating
+    renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
+    
+    // Reduce shadow map size if shadows are enabled
+    if (renderer.shadowMap) {
+      renderer.shadowMap.enabled = !isMobile;
+    }
+  }
+
+  // 2. Pause video when out of viewport to eliminate background lag
+  const heroVideo = document.querySelector('video') || document.getElementById('heroVideo');
+  
+  if (heroVideo && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heroVideo.play().catch(() => {});
+        } else {
+          heroVideo.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    videoObserver.observe(heroVideo);
+  }
+});
